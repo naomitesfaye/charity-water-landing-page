@@ -722,3 +722,12 @@ body {
     gap: 38px;
   }
 }
+
+
+/* Adjust navigation for three links */
+@media (min-width: 801px) {
+  .nav-links {
+    left: 25%;
+    gap: 40px;
+  }
+}
