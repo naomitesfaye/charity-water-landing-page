@@ -1,0 +1,715 @@
+/* --------------------
+   BASIC PAGE SETTINGS
+-------------------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fdf6e3;
+  color: #111;
+}
+
+
+/* --------------------
+   NAVIGATION
+-------------------- */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  padding: 15px 35px;
+  z-index: 10;
+}
+
+.logo-link {
+  width: 260px;
+  height: 60px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Your logo file has extra transparent space,
+   so this enlarges and repositions it */
+.logo {
+  width: 260px;
+  transform: scale(1.7);
+}
+
+.nav-links {
+  display: flex;
+  gap: 65px;
+  margin-left: auto;
+  margin-right: 70px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-size: 17px;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+}
+
+.donate-button {
+  background-color: #ffc907;
+  color: #111;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 13px 48px;
+  border: 2px solid #333;
+  border-radius: 3px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.donate-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+/* --------------------
+   HERO SECTION
+-------------------- */
+
+.hero {
+  min-height: 800px;
+  display: flex;
+  background-color: #fdf6e3;
+}
+
+
+/* LEFT SIDE */
+
+.hero-content {
+  width: 58%;
+  padding: 115px 45px 35px 35px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  color: #003b6f;
+  font-size: clamp(48px, 5vw, 76px);
+  line-height: 1.1;
+  letter-spacing: 2px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.yellow-line {
+  width: 400px;
+  height: 6px;
+  background-color: #ffc907;
+  margin-bottom: 24px;
+}
+
+.hero-text {
+  font-size: 27px;
+  line-height: 1.45;
+  margin-bottom: 25px;
+}
+
+.impact-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+
+  background-color: #ffc907;
+  color: #111;
+
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 800;
+
+  padding: 14px 25px;
+  margin-bottom: 35px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.impact-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22);
+}
+
+.arrow {
+  font-size: 45px;
+  line-height: 20px;
+}
+
+
+/* --------------------
+   IMPACT STATS
+-------------------- */
+
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 5px;
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
+  padding: 5px 18px;
+}
+
+.stat:not(:last-child) {
+  border-right: 2px solid #bac8c9;
+}
+
+.stat-icon {
+  color: #7ba6af;
+  font-size: 40px;
+  height: 48px;
+  margin-bottom: 7px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.stat p {
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+
+/* --------------------
+   RIGHT HERO IMAGE
+-------------------- */
+
+.hero-image {
+  width: 42%;
+  min-height: 800px;
+  overflow: hidden;
+
+  /* Gives the image the irregular/wavy left edge */
+  clip-path: polygon(
+    8% 0,
+    3% 8%,
+    8% 18%,
+    3% 29%,
+    9% 40%,
+    4% 52%,
+    9% 64%,
+    3% 77%,
+    9% 89%,
+    5% 100%,
+    100% 100%,
+    100% 0
+  );
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 800px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* --------------------
+   STORY SECTION
+-------------------- */
+
+.story {
+  background-color: #77a8bb;
+  text-align: center;
+  padding: 75px 20px;
+}
+
+.story h2 {
+  color: #003b6f;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.story p {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.story-button {
+  display: inline-block;
+  background-color: #ffc907;
+  color: #111;
+  text-decoration: none;
+  padding: 15px 25px;
+  font-weight: bold;
+  font-size: 18px;
+
+  transition: transform 0.2s ease;
+}
+
+.story-button:hover {
+  transform: scale(1.05);
+}
+
+
+/* --------------------
+   DONATE SECTION
+-------------------- */
+
+.donate-section {
+  background-color: #003b6f;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.donate-section h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.donate-section p {
+  font-size: 19px;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.bottom-donate-button {
+  display: inline-block;
+  background-color: #ffc907;
+  color: #111;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 45px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.bottom-donate-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* --------------------
+   MOBILE / RESPONSIVE
+-------------------- */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    position: relative;
+    height: auto;
+    padding: 12px 20px;
+  }
+
+  .logo-link {
+    width: 170px;
+  }
+
+  .logo {
+    width: 170px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .donate-button {
+    margin-left: auto;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 40px 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .yellow-line {
+    width: 75%;
+  }
+
+  .hero-text {
+    font-size: 21px;
+  }
+
+  .hero-text br {
+    display: none;
+  }
+
+  .impact-button {
+    font-size: 20px;
+  }
+
+  .hero-image {
+    width: 100%;
+    min-height: 500px;
+    clip-path: none;
+  }
+
+  .hero-image img {
+    min-height: 500px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat:not(:last-child) {
+    border-right: none;
+ border-bottom: 2px solid #bac8c9;
+    padding-bottom: 20px;
+  }
+
+}
+
+/* --------------------------------
+   DESKTOP CANVA DESIGN ADJUSTMENTS
+-------------------------------- */
+
+@media (min-width: 801px) {
+
+  /* Fix cropped logo */
+  .logo {
+    width: 260px;
+    transform: none;
+  }
+
+  /* Move navigation to match Canva */
+  .nav-links {
+    position: absolute;
+    left: 28%;
+    top: 40px;
+    margin: 0;
+    gap: 65px;
+  }
+
+  /* Move donate button slightly inward */
+  .donate-button {
+    margin-left: auto;
+    margin-right: 45px;
+    padding: 11px 47px;
+  }
+
+  /* Make cream side slightly smaller */
+  .hero-content {
+    width: 55%;
+    padding: 105px 35px 25px 35px;
+  }
+
+  /* Make photo larger */
+  .hero-image {
+    width: 45%;
+  }
+
+  /* Match headline sizing */
+  .hero-content h1 {
+    font-size: 72px;
+    line-height: 1.08;
+    margin-bottom: 22px;
+  }
+
+  /* Match yellow divider */
+  .yellow-line {
+    width: 400px;
+    height: 5px;
+    margin-bottom: 22px;
+  }
+
+  /* Tighten paragraph spacing */
+  .hero-text {
+    font-size: 27px;
+    line-height: 1.45;
+    margin-bottom: 23px;
+  }
+
+  /* Match CTA */
+  .impact-button {
+    font-size: 25px;
+    padding: 13px 27px;
+    margin-bottom: 27px;
+  }
+
+  .stats {
+    margin-top: 0;
+  }
+
+  .stat {
+    padding: 4px 12px;
+  }
+}
+
+
+/* --------------------------------
+   FINAL POLISH FIXES
+-------------------------------- */
+
+/* move logo closer left */
+.navbar {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+/* logo closer to edge */
+.logo-link {
+  margin-left: 0;
+  width: 250px;
+}
+
+/* move nav a little left */
+.nav-links {
+  left: 29%;
+}
+
+/* donate button closer to right edge */
+.donate-button {
+  margin-right: 12px;
+}
+
+/* better icon styling */
+.stat-icon {
+  color: #7ba6af;
+  height: 52px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon svg {
+  width: 42px;
+  height: 42px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* softer divider shape between text side and image */
+.hero-image {
+  clip-path: polygon(
+    7% 0,
+    5.5% 8%,
+    7.5% 16%,
+    5.8% 24%,
+    7.2% 33%,
+    5.8% 42%,
+    7.4% 51%,
+    5.7% 61%,
+    7.1% 71%,
+    5.9% 81%,
+    7.3% 91%,
+    6.2% 100%,
+    100% 100%,
+    100% 0
+  );
+}
+
+/* cream side needs positioning for wave */
+.hero-content {
+  position: relative;
+  overflow: visible;
+  padding-bottom: 95px;
+}
+
+/* wavy blue shape ONLY on left side bottom */
+.hero-content::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+
+  background-color: #7ba6af;
+
+  background-image: radial-gradient(
+    circle at 32px 0,
+    #fdf6e3 31px,
+    transparent 32px
+  );
+
+  background-size: 64px 55px;
+  background-repeat: repeat-x;
+
+  pointer-events: none;
+}
+
+/* remove the full-width blue strip effect below hero */
+.story {
+  background-color: #fdf6e3;
+  padding-top: 90px;
+}
+
+/* keep hero and story visually separate */
+.hero {
+  margin-bottom: 0;
+}
+
+
+/* =================================
+   HERO BOTTOM + WAVE FINAL FIX
+================================= */
+
+@media (min-width: 801px) {
+
+  /* Make the hero fill the entire screen height */
+  .hero {
+    height: 100vh;
+    min-height: 760px;
+    overflow: hidden;
+    align-items: stretch;
+  }
+
+  /* Left and right sides must reach the same bottom */
+  .hero-content,
+  .hero-image {
+    height: 100%;
+    min-height: 0;
+  }
+
+  /* Make photo go ALL the way to the bottom */
+  .hero-image {
+    display: flex;
+    align-self: stretch;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+  }
+
+  /* Make the wave smoother and extend it to the photo */
+  .hero-content::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    /* Extends blue into the clipped area so it meets the photo */
+    width: calc(100% + 2.8vw);
+
+    height: 58px;
+    background-color: #7ba6af;
+
+    /* Wider + shallower curves = softer waves */
+    background-image:
+      radial-gradient(
+        ellipse 55px 27px at 50% 0%,
+        #fdf6e3 97%,
+        transparent 100%
+      );
+
+    background-size: 92px 35px;
+    background-repeat: repeat-x;
+
+    pointer-events: none;
+    z-index: 3;
+  }
+}
+
+
+/* --------------------------------
+   SPREAD HERO CONTENT VERTICALLY
+-------------------------------- */
+
+@media (min-width: 801px) {
+
+  /* Give the CTA a little more breathing room */
+  .impact-button {
+    margin-bottom: 48px;
+  }
+
+  /* Push the stats farther down toward the waves */
+  .stats {
+    margin-top: 10px;
+  }
+
+  /* Slightly increase spacing inside each stat */
+  .stat-icon {
+    margin-bottom: 10px;
+  }
+
+  .stat strong {
+    margin-bottom: 9px;
+  }
+}
+
+
+/* --------------------------------
+   FINAL TEXT + CTA SPACING
+-------------------------------- */
+
+@media (min-width: 801px) {
+
+  /* Spread out the description lines */
+  .hero-text {
+    line-height: 1.6;
+    margin-bottom: 34px;
+  }
+
+  /* Move MAKE YOUR IMPACT farther down */
+  .impact-button {
+    margin-top: 8px;
+    margin-bottom: 55px;
+  }
+
+}
+
+
+
+/* Move hero content slightly lower */
+@media (min-width: 801px) {
+  .hero-content {
+    padding-top: 130px;
+  }
+}
+
+@media (min-width: 801px) {
+  .stats {
+    transform: translateY(-30px);
+  }
+}
