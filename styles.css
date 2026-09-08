@@ -713,3 +713,12 @@ body {
     transform: translateY(-30px);
   }
 }
+
+
+/* Fit all three navigation links */
+@media (min-width: 801px) {
+  .nav-links {
+    left: 25%;
+    gap: 38px;
+  }
+}
