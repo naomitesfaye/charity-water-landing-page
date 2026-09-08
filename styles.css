@@ -727,7 +727,7 @@ body {
 /* Adjust navigation for three links */
 @media (min-width: 801px) {
   .nav-links {
-    left: 21%;
-    gap: 32px;
+    left: 23%;
+    gap: 36px;
   }
 }
